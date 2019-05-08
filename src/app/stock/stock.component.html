@@ -3,3 +3,7 @@
 </p>
 <p>股票的id是：{{stockId}}</p>
 <p>isPro是：{{isPro}}</p>
+<!-- 进入子路由需要是./   而进入主路由就不需要. -->
+<a [routerLink]="['./']">买家列表</a>
+<a [routerLink]="['./seller', 100]">卖家列表</a>
+<router-outlet></router-outlet>
