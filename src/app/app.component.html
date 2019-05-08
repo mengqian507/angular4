@@ -4,5 +4,12 @@
 <!-- 在路由中传参数 -->
 <a [routerLink]="['/stock2', 2]">股票2详情</a>
 <input type="button" value="股票详情" (click)="toStockDetail()">
-<!-- router-outlet 在html中标记路由内容呈现位置的占位符指令 -->
+
+<!--aux: 后面的参数是路由   primary: 'home'这个属性一般不要，它的作用是：不管在那个页面上点击开始咨询都会跳到home页  -->
+<a [routerLink]="[{outlets: {primary: 'home', aux: 'consult'}}]">开始咨询</a>
+<a [routerLink]="[{outlets: {aux: null}}]">结束咨询</a>
+
+<!-- router-outlet 在html中标记路由内容呈现位置的占位符指令 这个是主插座 -->
 <router-outlet></router-outlet>
+<!-- 有name属性的是辅助插座   一般写每个页面上都有的资讯小框 -->
+<router-outlet name="aux"></router-outlet>
