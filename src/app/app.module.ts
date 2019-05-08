@@ -10,6 +10,7 @@ import { Stock2Component } from './stock2/stock2.component';
 import { BuyerListComponent } from './buyer-list/buyer-list.component';
 import { SellerListComponent } from './seller-list/seller-list.component';
 import { ConsultComponent } from './consult/consult.component';
+import { PermissionGuard } from './guard/permission.guard';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,8 @@ import { ConsultComponent } from './consult/consult.component';
     SellerListComponent,
     ConsultComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [PermissionGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
