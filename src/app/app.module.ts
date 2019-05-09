@@ -11,6 +11,8 @@ import { BuyerListComponent } from './buyer-list/buyer-list.component';
 import { SellerListComponent } from './seller-list/seller-list.component';
 import { ConsultComponent } from './consult/consult.component';
 import { PermissionGuard } from './guard/permission.guard';
+import { Stock3Component } from './stock3/stock3.component';
+import { Stock4Component } from './stock4/stock4.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PermissionGuard } from './guard/permission.guard';
     Stock2Component,
     BuyerListComponent,
     SellerListComponent,
-    ConsultComponent
+    ConsultComponent,
+    Stock3Component,
+    Stock4Component
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [PermissionGuard],
